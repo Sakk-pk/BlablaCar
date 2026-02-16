@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:week_3_blabla_project/ui/widgets/actions/bla_icon_button.dart';
 
 import '../../../theme/theme.dart';
-
+import '../../../widgets/actions/bla_icon_button.dart';
 
 class RidePrefInput extends StatelessWidget {
   final String title;
   final VoidCallback onPressed;
   final IconData leftIcon;
 
+  /// If true the text is displayed lighter
   final bool isPlaceHolder;
 
+  /// Optional right icon
   final IconData? rightIcon;
   final VoidCallback? onRightIconPressed;
 
@@ -28,6 +29,7 @@ class RidePrefInput extends StatelessWidget {
   Widget build(BuildContext context) {
     final textColor =
         isPlaceHolder ? BlaColors.textLight : BlaColors.textNormal;
+
     return ListTile(
       onTap: onPressed,
       title: Text(
