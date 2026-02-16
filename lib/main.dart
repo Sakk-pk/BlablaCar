@@ -1,32 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:week_3_blabla_project/ui/widgets/actions/bla_button.dart';
-import 'package:week_3_blabla_project/ui/widgets/inputs/bla_form.dart';
+import 'package:week_3_blabla_project/ui/screens/test_screen.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home: Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-              // BlaButton(
-              //   text: 'Click me',
-              //   icon: Icons.person,
-              //   backgroundColor: Colors.blue,
-              //   textColor: Colors.white, 
-              //   iconColor: Colors.white,
-              // ),
-              // BlaButton(
-              //   text: 'Click me',
-              //   icon: Icons.person,
-              //   backgroundColor: Colors.white,
-              //   textColor: Colors.blue,
-              //   iconColor: Colors.blue,
-              // ),
-              BlaForm()
-          ],
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(
+          child: TestScreen(),
         ),
       ),
-    ),
-  ));
+    );
+  }
 }
